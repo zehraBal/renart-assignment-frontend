@@ -11,7 +11,7 @@ function App() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("http://localhost:8081/api/products");
+        const response = await fetch("http://localhost:8080/api/products");
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -32,7 +32,9 @@ function App() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-2xl font-bold mb-6">Product List</h1>
+      <h1 className="text-2xl font-bold mb-6 text-center font-avenir-book">
+        Product List
+      </h1>
       <ProductCarousel products={products} />
     </div>
   );
