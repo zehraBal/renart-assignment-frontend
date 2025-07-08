@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-2xl font-bold mb-6 text-center font-avenir-book">
+      <h1 className="text-2xl font-bold mb-6 text-center font-avenir-45 text-45">
         Product List
       </h1>
       <ProductCarousel products={products} />

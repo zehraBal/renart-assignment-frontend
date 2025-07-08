@@ -17,7 +17,9 @@ const StarRating = ({ score }) => {
           <FaRegStar key={`empty-${i}`} className="text-lg" />
         ))}
       </div>
-      <span className="ml-1 text-sm text-gray-700">{rating.toFixed(1)}/5</span>
+      <span className="ml-1 text-sm text-gray-700 font-avenir-book">
+        {rating.toFixed(1)}/5
+      </span>
     </div>
   );
 };

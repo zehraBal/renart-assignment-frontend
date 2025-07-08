@@ -63,10 +63,10 @@ const ProductCarousel = ({ products }) => {
             </div>
 
             {/* Product Info */}
-            <h3 className="font-semibold text-lg mb-1 line-clamp-1">
+            <h3 className="font-semibold text-lg mb-1 line-clamp-1 font-montserrat-medium">
               {product.name}
             </h3>
-            <p className="text-gray-700 mb-2">
+            <p className="text-gray-700 mb-2 font-montserrat-regular">
               ${product.price.toFixed(2)} USD
             </p>
 

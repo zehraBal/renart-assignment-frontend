@@ -14,3 +14,45 @@
 .react-multi-carousel-dot--active button {
   background: #555;
 }
+
+/* Avenir Font  */
+@font-face {
+  font-family: "Avenir-Book-12";
+  src: url("./assets/fonts/Avenir-Book-12.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir-Book-14";
+  src: url("./assets/fonts/Avenir-Book-14.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir-Book-45";
+  src: url("./assets/fonts/Avenir-Book-45.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Montserrat Font */
+@font-face {
+  font-family: "Montserrat-Regular-15";
+  src: url("./assets/fonts/Montserrat-Regular-15.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat-Medium-15";
+  src: url("./assets/fonts/Montserrat-Medium-15.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
