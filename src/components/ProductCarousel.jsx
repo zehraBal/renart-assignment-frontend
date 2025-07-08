@@ -29,6 +29,20 @@ const ProductCarousel = ({ products }) => {
     },
   };
 
+  // Renk isimlerini formatlama
+  const getColorName = (colorKey) => {
+    switch (colorKey) {
+      case "yellow":
+        return "Yellow Gold";
+      case "rose":
+        return "Rose Gold";
+      case "white":
+        return "White Gold";
+      default:
+        return "Gold";
+    }
+  };
+
   return (
     <Carousel
       responsive={responsive}
@@ -46,7 +60,7 @@ const ProductCarousel = ({ products }) => {
         return (
           <div
             key={index}
-            className="p-4 border rounded-lg mx-2 bg-white flex flex-col  border-transparent"
+            className="p-4 border rounded-lg mx-2 bg-white flex flex-col border-transparent"
           >
             {/* Product Image */}
             <div className="mb-4 h-48 flex items-center justify-center">
@@ -63,20 +77,22 @@ const ProductCarousel = ({ products }) => {
             </div>
 
             {/* Product Info */}
-            <h3 className="font-semibold text-lg mb-1 line-clamp-1 font-montserrat-medium">
+            <h3 className="font-semibold text-lg mb-1 line-clamp-1 font-montserrat-medium text-15">
               {product.name}
             </h3>
-            <p className="text-gray-700 mb-2 font-montserrat-regular">
+            <p className="text-gray-700 mb-2 font-montserrat-regular text-15">
               ${product.price.toFixed(2)} USD
             </p>
 
-            {/* Value Gold Rating */}
+            {/* Dynamic Color Label */}
             <div className="mb-3">
-              <span className="block text-sm">Value Gold</span>
+              <span className="block text-sm font-avenir-12 text-12">
+                {getColorName(currentColor)} {/* Dinamik renk ismi */}
+              </span>
               <StarRating score={product.popularityScore} />
             </div>
 
-            {/* Color Selector - Fixed aspect ratio circles */}
+            {/* Color Selector */}
             <div className="flex space-x-2 mb-3">
               {[
                 { key: "yellow", hex: "#E6CA97" },
@@ -85,7 +101,7 @@ const ProductCarousel = ({ products }) => {
               ].map((color) => (
                 <button
                   key={color.key}
-                  className={`rounded-full border-1 flex-shrink-0  ${
+                  className={`rounded-full border-1 flex-shrink-0 ${
                     currentColor === color.key
                       ? "border-gray-100"
                       : "border-transparent"
